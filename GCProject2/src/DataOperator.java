@@ -19,11 +19,14 @@ public class DataOperator {
 		System.out.println("Input second date(MM/DD/YYYY)");
 		// obtain second date input
 		secondInput = reader.readLine();
+		// check formatting of userinput
 		if (!firstInput.matches(datePattern) && !secondInput.matches(datePattern)) {
 			System.out.print("Please try again with appropriate date format");
 		}
+		// store dates and apply formatting
 		final LocalDate firstDate = LocalDate.parse(firstInput, formatter);
 		final LocalDate secondDate = LocalDate.parse(secondInput, formatter);
+		// check days between two inputs
 		final long days = ChronoUnit.DAYS.between(firstDate, secondDate);
 		System.out.println("There are " + days + " day(s)" + " between " + firstInput + " and " + secondInput);
 	}
