@@ -14,8 +14,10 @@ public class DataOperator {
 		final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 		final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Input first date(MM/DD/YYYY)");
+		// obtain first user date input
 		firstInput = reader.readLine();
 		System.out.println("Input second date(MM/DD/YYYY)");
+		// obtain second date input
 		secondInput = reader.readLine();
 		if (!firstInput.matches(datePattern) && !secondInput.matches(datePattern)) {
 			System.out.print("Please try again with appropriate date format");
